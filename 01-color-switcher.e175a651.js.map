@@ -1,0 +1,1 @@
+{"mappings":"AACeA,SAASC,cAAc,8BACxBD,SAASC,cAAc","sources":["src/js/01-color-switcher.js"],"sourcesContent":["const refs = {\n  starActiont: document.querySelector('button[data-start=\"start\"]'),\n  stopAction: document.querySelector('button[data-stop=\"stop\"]')\n}\n\n"],"names":["document","querySelector"],"version":3,"file":"01-color-switcher.e175a651.js.map"}
