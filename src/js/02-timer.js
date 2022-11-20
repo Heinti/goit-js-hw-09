@@ -39,7 +39,6 @@ function startTimer() {
   const intervalId =  setInterval(() => {
     const currentTime = Date.now();
     msToDate = selectedUserDate - currentTime;
-    console.log("🚀 ~ file: 02-timer.js ~ line 42 ~ intervalId ~ msToDate", msToDate);
 
     innerDateHtml(addLeadingZero(convertMs(msToDate)));
 
