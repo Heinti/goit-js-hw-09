@@ -20,6 +20,7 @@ function createNewPromises(firstDelay, step, amount) {
   for (let i = 1; i <= amount; i += 1) {
     createPromise(i, newStep)
       .then(({ position, delay }) => {
+        // console.log(position)
         Notiflix.Notify.success(
           `✅ Fulfilled promise ${position} in ${delay}ms`
         );
@@ -35,18 +36,22 @@ function createNewPromises(firstDelay, step, amount) {
 }
 
 function createPromise(position, delay) {
+  console.log(position)
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
 
     setInterval(() => {
       if (shouldResolve) {
-        resolve(position, delay);
+        resolve({position, delay});
+        
       } else {
-        reject(position, delay);
+        reject({position, delay});
+        
       }
     }, delay);
   });
 }
+
 
 // createPromise(2, 1500)
 //   .then(({ position, delay }) => {
